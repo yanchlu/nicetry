@@ -66,27 +66,79 @@ CREATE TABLE `Task` (
   CONSTRAINT `uid1` FOREIGN KEY (`uid`) REFERENCES `User` (`uid`)
 ) ;
 ```
-2.创建任务表
-```Task
+3.创建消息表
+```Message
+CREATE TABLE `Message` (
+  `tid` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `time` datetime DEFAULT NULL,
+  `floor` int(11) NOT NULL,
+  `detail` varchar(60) NOT NULL,
+  KEY `tid3` (`tid`),
+  KEY `uid3` (`uid`),
+  CONSTRAINT `tid3` FOREIGN KEY (`tid`) REFERENCES `Task` (`tid`),
+  CONSTRAINT `uid3` FOREIGN KEY (`uid`) REFERENCES `User` (`uid`)
+) ;
 ```
-2.创建任务表
-```Task
+4.创建UserJoins表
+```UserJoins
+CREATE TABLE `UserJoins` (
+  `tid` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `time` datetime NOT NULL,
+  KEY `uid2` (`uid`),
+  KEY `tid2` (`tid`),
+  CONSTRAINT `tid2` FOREIGN KEY (`tid`) REFERENCES `Task` (`tid`),
+  CONSTRAINT `uid2` FOREIGN KEY (`uid`) REFERENCES `User` (`uid`)
+) ;
 ```
-2.创建任务表
-```Task
+5.创建调查问卷表
+```Survey
+CREATE TABLE `Survey` (
+  `tid` int(11) NOT NULL,
+  `sid` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`sid`),
+  KEY `tid_of_Survey` (`tid`),
+  CONSTRAINT `tid_of_Survey` FOREIGN KEY (`tid`) REFERENCES `Task` (`tid`)
+) 
 ```
-2.创建任务表
-```Task
+6.创建问题表
+```Question
+CREATE TABLE `Question` (
+  `sid` int(11) NOT NULL,
+  `qid` int(11) NOT NULL,
+  `qtype` varchar(30) NOT NULL,
+  `qtitle` varchar(100) NOT NULL,
+  `Answer_a` varchar(60) DEFAULT NULL,
+  `Answer_b` varchar(60) DEFAULT NULL,
+  `Answer_c` varchar(60) DEFAULT NULL,
+  `Answer_d` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`sid`,`qid`),
+  CONSTRAINT `sid_of_Question` FOREIGN KEY (`sid`) REFERENCES `Survey` (`sid`)
+) 
 ```
-2.创建任务表
-```Task
+7.创建答案统计表
+```AnswerStatistics
+CREATE TABLE `AnswerStatistics` (
+  `sid` int(11) NOT NULL,
+  `qid` int(11) NOT NULL,
+  `count_a` int(11) DEFAULT NULL,
+  `count_b` int(11) DEFAULT NULL,
+  `count_c` int(11) DEFAULT NULL,
+  `count_d` int(11) DEFAULT NULL,
+  PRIMARY KEY (`sid`,`qid`),
+  CONSTRAINT `key_of_AnswerStatistics` FOREIGN KEY (`sid`, `qid`) REFERENCES `Question` (`sid`, `qid`)
+) 
 ```
-2.创建任务表
-```Task
+8.创建事务表
+```Session
+CREATE TABLE `Session` (
+  `uid` int(11) NOT NULL,
+  `cookie` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`cookie`),
+  KEY `cookie_of_Session` (`cookie`),
+  KEY `uid_of_Session` (`uid`),
+  CONSTRAINT `uid_of_Session` FOREIGN KEY (`uid`) REFERENCES `User` (`uid`)
+) 
 ```
-2.创建任务表
-```Task
-```
-2.创建任务表
-```Task
-```
+
