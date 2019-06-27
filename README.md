@@ -2,9 +2,9 @@
 # 安装部署说明
 [Android APP部署文档](#1)
 
-[Web前端部署文档](#2)
+[服务器部署文档](#2)
 
-[Web服务端部署文档](#3)
+[数据库部署文档](#3)
 
 
 <h2 id='1'> Android APP部署文档 </h2>
@@ -18,63 +18,23 @@
   - 生成的apk在`\app\build\outputs\apk\debug`中
 
 
-<h2 id='2'> Web前端部署文档 </h2>
+<h2 id='2'> 服务器部署文档 </h2>
 
 ### 环境需求
-- CentOS 7.0+
-- Node.js v10.9.0+
-- npm v6.2.0+
-- Nginx v1.14.0+
-- Git
-- Vim
+- JAVA 8
+- Tomcat9.0
 
 ### 安装步骤
 1. 下载源代码
 ```shell
-git clone https://github.com/ssad2019/web-client.git
+git clone https://github.com/sysu-abi/Server.git
 ```
+根目录下有封装好的ServerAndDB.war文件
 
-2. 安装cnpm
-```shell
-npm install -g cnpm --registry=https://registry.npm.taobao.org  
-```
+若想使用其他数据库，则
 
-3. 安装依赖
-```shell
-cd web-client  
-cnpm install
-```
+2.
 
-4. 运行测试
-```shell
-cnpm run serve
-# 服务运行于 http://localhost:5000
-```
-
-5. 生成dist文件
-```shell
-cnpm run build
-```
-
-6. 复制dist文件至网站目录
-```shell
-mkdir /data/wwwroot/web-client
-cp dist/ /data/wwwroot/web-client
-cd /data/wwwroot
-chmod -R 777 wwwroot
-```
-
-7. 配置nginx.conf
-```shell
-cd /usr/local/nginx
-vim nginx.conf
-
-# 在文件中此处末尾添加如下一行
-http {
-    ... # 这里包含其它配置
-    include vhost/*.conf;
-}
-```
 
 8. 配置vhost文件
 ```shell
