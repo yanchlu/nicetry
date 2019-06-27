@@ -19,21 +19,21 @@
 ```shell
 git clone https://github.com/sysu-abi/Server.git
 ```
-根目录下有封装好的ServerAndDB.war文件
+- 根目录下有封装好的ServerAndDB.war文件
 
 2. 下载Apache Tomcat9.0
-参考链接（https://blog.csdn.net/bigpenga/article/details/81263007）
+- 参考链接（https://blog.csdn.net/bigpenga/article/details/81263007）
 
 3. 部署项目
-解压后，将根目录下的ServerAndDB.war文件放在Apache Tomcat 9.0服务器的根目录的webapps文件夹下即可。
+- 解压后，将根目录下的ServerAndDB.war文件放在Apache Tomcat 9.0服务器的根目录的webapps文件夹下即可。
 
-数据库的当前位置是在服务器上。若想修改数据库地址，则可使用Eclipse导入ServerAndDB.war或者加载ServerAndDB文件夹下的JAVA项目（推荐使用前者）。
+- 数据库的当前位置是在服务器上。若想修改数据库地址，则可使用Eclipse导入ServerAndDB.war或者加载ServerAndDB文件夹下的JAVA项目（推荐使用前者）。
 然后修改src文件夹下的mySpring.xml，将url、username和password设置为符合自己数据库的值。
 
 4.使用postman测试相关接口
 
 ### 数据库建表
-再次申明：所需的表已在服务器建立，若想尝试自己部署，可以自行参考。
+再次申明：所需的表已在服务器建立，若想尝试自己部署，可以自行参考。  
 1.创建用户表
 ```User
 CREATE TABLE `User` (
