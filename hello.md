@@ -8,23 +8,24 @@
 
 ## 2. PSP2.1统计表
 
-|| Personal Software Process Stages | Time |
+| Personal Software Process Stages| PSP阶段 | Time |
 | :--------:   | :-----:  | :----: |
-|Planning|计划||
-|Estimate|估计这个任务需要多少时间||
-|Development|开发||
-|Analysis |需求分析 (包括学习新技术)||
-|Design Spec|生成设计文档||
-|Design Review |设计复审 (和同事审核设计文档)||
-|Coding Standard|代码规范 (为目前的开发制定合适的规范)||
-|Design |具体设计||
-|Coding |具体编码||
-|Code Review |代码复审||
-|Test|测试（自我测试，修改代码，提交修改）||
-|Report|报告||
-|Test Report|测试报告||
+|**Planning**|**计划**|4|
+|Estimate|估计任务的花费时间|4|
+|**Development**|**开发**|80|
+|Analysis |需求分析 (包括学习新技术)|16|
+|Design Spec|生成设计文档|8|
+|Design Review |设计复审 (和同事审核设计文档)|0|
+|Coding Standard|代码规范 (为目前的开发制定合适的规范)|4|
+|Design |具体设计|8|
+|Coding |具体编码|36|
+|Code Review |代码复审|0|
+|Test|测试（自我测试，修改代码，提交修改）|8|
+|**Report**|**报告**|8|
+|Test Report|测试报告|0|
 |Size Measurement|计算工作量||
-|Postmortem & Process Improvement Plan|事后总结, 并提出过程改进计划||
+|Postmortem & Process Improvement Plan|事后总结, 并提出过程改进计划|8|
+|**Total**|**合计**|92|
 
 ## 3. 主要工作清单
 - 设计数据库
@@ -33,7 +34,10 @@
 - 提供后端相关文档
 - 测试项目
 ## 4. 在项目相关仓库中的贡献
+代码部分  
 
+文档部分  
+文档统一整合后由文档组提交。
 ## 5. 特别致谢 
 首先我要感谢另一名负责后端的队友蔡俊琪，他独自用Spring框架完成了JAVA Web的部署，并且实现了半数以上的API接口，我后面的工作都是建立在他打好的框架上，
 因此他对后端开发的贡献是功不可没的。同时，在我配置后端环境时，他也耐心地解答了我的诸多疑惑，在此我对他提供的帮助表示由衷的感谢。   
