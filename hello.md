@@ -12,20 +12,20 @@
 | :--------:   | :-----:  | :----: |
 |**Planning**|**计划**|4|
 |Estimate|估计任务的花费时间|4|
-|**Development**|**开发**|80|
+|**Development**|**开发**|82|
 |Analysis |需求分析 (包括学习新技术)|16|
-|Design Spec|生成设计文档|8|
+|Design Spec|生成设计文档|6|
 |Design Review |设计复审 (和同事审核设计文档)|0|
 |Coding Standard|代码规范 (为目前的开发制定合适的规范)|4|
 |Design |具体设计|8|
-|Coding |具体编码|36|
+|Coding |具体编码|32|
 |Code Review |代码复审|0|
-|Test|测试（自我测试，修改代码，提交修改）|8|
-|**Report**|**报告**|8|
+|Test|测试（自我测试，修改代码，提交修改）|16|
+|**Report**|**报告**|14|
 |Test Report|测试报告|0|
-|Size Measurement|计算工作量||
-|Postmortem & Process Improvement Plan|事后总结, 并提出过程改进计划|8|
-|**Total**|**合计**|92|
+|Size Measurement|计算工作量|10|
+|Postmortem & Process Improvement Plan|事后总结, 并提出过程改进计划|4|
+
 
 ## 3. 主要工作清单
 - 设计数据库
